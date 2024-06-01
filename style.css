@@ -1,0 +1,58 @@
+body{
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+div{
+  width: 300px;
+  height: 300px;
+  padding-top: 12px;
+  display: inline-block;
+  border: 1px solid gray;
+  text-align: center;
+}
+img{
+  height: 60px;
+  width: 60px;
+  border:1px solid gray;
+  background: transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  
+
+}
+.game-heading{
+  margin-top: 0;
+  font-size: 25px;
+}
+.fingers{
+  border: none;
+  border-radius: 30px;
+  background-color: white;
+
+}
+.ABC{
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  margin: auto;
+  
+}
+.reset-but{
+  display: block;
+  background-color: red;
+  margin-top: 10px;
+  padding: 5px 10px 5px 10px;
+  border: none;
+  color: white;
+  box-shadow: 2.5px 3px 6px #655d5d;
+  cursor: pointer;
+}
+.reset-but:active{
+  box-shadow: none;
+  margin-top: 13px;
+  margin-left: 2.5px;
+  opacity: 0.7;
+ 
+}
