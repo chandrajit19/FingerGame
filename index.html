@@ -3,54 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Play the Fingers Game and test your luck against the computer!">
   <title>Game</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div>
-    <h3 class="game-heading">Fingers Game</h3>
-    <!-- first Button-->
-  <button class="fingers" onclick=" computerMove=compMove();  userMove='one finger';
-  getResult(computerMove, 'one finger');
-  display();
- "><img src="One-finger.png" alt="one-finger"></button>
+  
+  <div class="container">
+    <h1 class="game-heading">Fingers Game</h1>
+
+     <!-- first Button -->
+      <button type="button" class="fingers" onclick=" computerMove=compMove();  userMove='one finger';
+        getResult(computerMove, 'one finger');
+        display();">
+        <img src="/img/one-fig.webp" alt="one-finger"></button>
 
 
-<!-- second Button-->
-
-<button class="fingers" onclick=" computerMove=compMove();  userMove='two fingers'
- getResult(computerMove, 'two fingers');
-  display();
-"><img src="two-fingers.png" alt="one-finger"></button>
-
+     <!-- second Button-->
+        <button type="button" class="fingers" onclick=" computerMove=compMove();  userMove='two fingers';
+        getResult(computerMove, 'two fingers');
+        display();">
+        <img src="/img/tow-fig.webp" alt="two-fingers"></button>
 
 
-<!--third  Button-->
 
-<button class="fingers" onclick=" computerMove=compMove(); userMove='three fingers';
- 
- getResult(computerMove, 'three fingers')
- display();
- "><img src="three-fingers.png" alt="one-finger"></button>
+       <!--third  Button-->
+       <button  type="button" class="fingers" onclick=" computerMove=compMove(); userMove='three fingers';
+        getResult(computerMove, 'three fingers');
+        display();">
+        <img src="/img/three-fig.webp" alt="three-fingers"></button>
 
- <!--Reset button-->
-<p class="ABC">
-   <button class="reset-but" onclick="localStorage.clear(); resetScore();">
-  Reset
- </button>
-</p>
+      <!--Reset button-->
+      <p class="ABC">
+        <button type="button" class="reset-but" onclick="localStorage.clear(); resetScore();">
+        Reset
+      </button>
+      </p>
 
 
-<p class="comp-move margin"></p>
-<p class="count-rslt margin"></p>
+      <p class="comp-move margin"></p>
+      <p class="count-rslt margin"></p>
 
   </div>
   
- 
-  
-  
   
   <script>
+  
     let scoreStr=localStorage.getItem('score');
     let score = scoreStr ? JSON.parse(scoreStr) : {
     win: 0,
@@ -122,10 +120,9 @@
    function display(){
     localStorage.setItem('score', JSON.stringify(score));
     // Dom manipulation
-    document.querySelector('.comp-move').innerHTML=` <h4> Computer move is: ${computerMove} <br>Your move is: ${userMove} <br>Result: ${result} </h4>`;
+    document.querySelector('.comp-move').innerHTML=` <h4> Computer move: ${computerMove} <br>Your move: ${userMove} <br>Result: ${result} </h4>`;
 
-    // console.log(`Computer move is: ${computerMove} \nYour move is: ${userMove} \n${result}`);
-    // console.log(score.displayScore());
+
 
     // DOM manipulation
     document.querySelector('.count-rslt').innerHTML=`<h3>${score.displayScore()}</h3>`;
@@ -133,5 +130,7 @@
    }
      
   </script>
+
+  
 </body>
 </html>
